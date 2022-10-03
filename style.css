@@ -2,13 +2,9 @@
 #top { grid-area: top; }
 #cards { grid-area: cards; }
 #sideempty { grid-area: sideempty; }
-#imgcuphead { grid-area: imgcuphead; }
 #cuphead { grid-area: cuphead; }
-#imghollow { grid-area: imghollow; }
 #hollow { grid-area: hollow; }
-#imgoriblind { grid-area: imgoriblind; }
 #oriblind { grid-area: oriblind; }
-#imgoriwisp { grid-area: imgoriwisp; }
 #oriwisp { grid-area: oriwisp; }
 #footer { grid-area: footer; }
 #backtop { grid-area: backtop; }
@@ -20,10 +16,10 @@
 		grid-template-areas: 
 		'top top top top'
 		'cards cards cards cards'
-		'imgcuphead cuphead cuphead sideempty'
-		'imghollow hollow hollow sideempty'
-		'imgoriblind oriblind oriblind sideempty'
-		'imgoriwisp oriwisp oriwisp sideempty'
+		'cuphead cuphead cuphead sideempty'
+		'hollow hollow hollow sideempty'
+		'oriblind oriblind oriblind sideempty'
+		'oriwisp oriwisp oriwisp sideempty'
 		'footer footer footer backtop';
 		grid-template-columns: 1fr 1fr 1fr 5%;
 		grid-gap: 20px;
@@ -39,13 +35,9 @@
 		'cards cards'
 		'cards cards'
 		'cards cards'
-		'imgcuphead imgcuphead'
 		'cuphead cuphead'
-		'imghollow imghollow'
 		'hollow hollow'
-		'imgoriblind imgoriblind'
 		'oriblind oriblind'
-		'imgoriwisp imgoriwisp'
 		'oriwisp oriwisp'
 		'footer backtop';
 		grid-template-columns: 1fr 1fr;
@@ -55,8 +47,8 @@
 
 
 body {
-	color: #ffffff;
-	background: #000000;
+	color: #E7F6F2;
+	background: #041C32;
 }
 
 
@@ -79,22 +71,21 @@ h2 {
 
 h3 {
 	font-size: 1.25rem;
-	color: #000000;
-	background: #c1c1c1;
+	background: #395B64;
 	text-align: center;
 	text-transform: uppercase;
 	text-decoration: underline;
 }
 
 h4 {
-	font: sans-serif;
 	font-size: 1.2rem;
+	color: #A5C9CA;
 	text-transform: uppercase;
+	text-shadow: 0 0 10px #000000, 0 0 10px #000000;
 }
 
 
 p {
-
 	font-size: 1.25rem;
 	text-align: justify;
 }
@@ -182,7 +173,7 @@ article {
 	left: calc( var(--padding) * -1);
 	bottom: 0;
 	width: calc(100% + var(--padding));
-	background: #ffffff;
+	background: #A5C9CA;
 }
 
 .card-content {
@@ -214,17 +205,29 @@ article {
 	background-color: #3030ff;
 }
 
+section {
+	width: 100%;
+	height: 60vh;
+	display: flex;
+	flex: flex-wrap;
+	align-content: space-between;
+
+}
 
 
-
-
-
-
-
-#imgcuphead, #imghollow, #imgoriblind, #imgoriwisp {
-	padding: 10px 20px;
+section img {
+	width: 100%;
+	max-width: 616px;
+	height: 100%;
+	max-height: 308px;
 	display: block;
-	margin: auto;
+	float: left;
+}
+
+.textinfo {
+	float: right;
+	max-width: 60%;
+
 }
 
 
