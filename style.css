@@ -16,10 +16,10 @@
 		grid-template-areas: 
 		'top top top top'
 		'cards cards cards cards'
-		'cuphead cuphead cuphead sideempty'
-		'hollow hollow hollow sideempty'
-		'oriblind oriblind oriblind sideempty'
-		'oriwisp oriwisp oriwisp sideempty'
+		'cuphead cuphead cuphead cuphead'
+		'hollow hollow hollow hollow'
+		'oriblind oriblind oriblind oriblind'
+		'oriwisp oriwisp oriwisp oriwisp'
 		'footer footer footer backtop';
 		grid-template-columns: 1fr 1fr 1fr 5%;
 		grid-gap: 20px;
@@ -27,7 +27,7 @@
 }
 
 
-@media only screen and (max-width:  800px) {
+@media only screen and (max-width: 800px) {
 	.grid-container {
 		display: grid;
 		grid-template-areas: 
@@ -206,29 +206,68 @@ article {
 }
 
 section {
-	width: 100%;
-	height: 60vh;
 	display: flex;
-	flex: flex-wrap;
-	align-content: space-between;
-
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-color: #000000;
+	margin: 15px;
+	padding: 15px;
+	min-height: 50vh;
+	max-height: fit-content;
 }
 
+section::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+@media only screen and (max-width: 800px) {
+	section {
+	flex-direction: column;
+	}
+}
+
+.column1 {
+	width: 33.33%;
+}
+
+.column2 {
+	width: 66.66%;
+}
+
+picture {
+	display: inline-block;
+	float: left;
+	padding-right: 10px;
+	max-width: 100%;
+	width: auto;
+	max-height: 70vh;
+	height: auto;
+	overflow: hidden;
+}
 
 section img {
-	width: 100%;
-	max-width: 616px;
-	height: 100%;
-	max-height: 308px;
-	display: block;
-	float: left;
+	display: flex;
+	width: 390px;
+	max-height: 100%;
+	height: auto;
+	border-radius: 4px;
 }
 
-.textinfo {
+section .textinfo {
+	display: inline-block;
 	float: right;
-	max-width: 60%;
-
+	padding-left: 10px;
+	max-width: 65%;
+	height: auto;
 }
+
+section div .textinfo p {
+	font-size: 1.1rem;
+}
+
+
 
 
 table {
